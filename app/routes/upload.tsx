@@ -1,4 +1,4 @@
-import { prepareInstructions } from 'constants';
+import { prepareInstructions } from '../../constants';
 import { useState, type FormEvent } from 'react';
 import { useNavigate } from 'react-router';
 import FileUploader from '~/components/FileUploader';
@@ -83,7 +83,7 @@ const Upload = () => {
         
         setStatusText('Analysis complete, redirecting...');
 
-        console.log(data);
+        navigate(`/resume/${uuid}`);
     }
 
     const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
